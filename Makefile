@@ -22,4 +22,9 @@ brakeman: ## runs brakeman and deletes the related exited containers
 	docker-compose -f test.docker-compose.yml run test bundle exec brakeman --color && \
 	docker-compose -f test.docker-compose.yml down && \
 	docker rm $$(docker ps -f status=exited | grep -w framework_advanced-test | awk '{ print $$1 }')
-	
+
+rubycritic: ## runs brakeman and deletes the related exited containers
+	docker-compose -f test.docker-compose.yml build && \
+	docker-compose -f test.docker-compose.yml run test bundle exec rubycritic && \
+	docker-compose -f test.docker-compose.yml down && \
+	docker rm $$(docker ps -f status=exited | grep -w framework_advanced-test | awk '{ print $$1 }')
