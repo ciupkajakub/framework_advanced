@@ -16,3 +16,10 @@ rspec: ## runs rspec and deletes the related exited containers
 	docker-compose -f test.docker-compose.yml down && \
 	docker rm $$(docker ps -f status=exited | grep -w framework_advanced-test | awk '{ print $$1 }')
 # TODO: allow passing the specific file to the command
+
+brakeman: ## runs brakeman and deletes the related exited containers
+	docker-compose -f test.docker-compose.yml build && \
+	docker-compose -f test.docker-compose.yml run test bundle exec brakeman --color && \
+	docker-compose -f test.docker-compose.yml down && \
+	docker rm $$(docker ps -f status=exited | grep -w framework_advanced-test | awk '{ print $$1 }')
+	
