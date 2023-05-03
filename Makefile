@@ -35,3 +35,9 @@ rubocop: ## runs brakeman and deletes the related exited containers
 	docker-compose -f test.docker-compose.yml down && \
 	docker rm $$(docker ps -f status=exited | grep -w framework_advanced-test | awk '{ print $$1 }')
 # TODO: allow passing the specific file to the command
+
+console: ## runs console
+	docker-compose run demo-web bundle exec rails console && \
+	docker rm $$(docker ps -f status=exited | grep -w framework_advanced-demo-web | awk '{ print $$1 }') && \
+	docker-compose down
+
