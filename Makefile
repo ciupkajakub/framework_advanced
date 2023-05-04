@@ -41,3 +41,8 @@ console: ## runs console
 	docker rm $$(docker ps -f status=exited | grep -w framework_advanced-demo-web | awk '{ print $$1 }') && \
 	docker-compose down
 
+migrate: ## runs migrations
+	docker-compose run demo-web bundle exec rails db:migrate
+
+seed: ## runs migrations
+	docker-compose run demo-web bundle exec rails db:seed
