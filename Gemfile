@@ -28,6 +28,7 @@ gem 'stimulus-rails'
 gem 'jbuilder'
 
 gem 'brakeman'
+gem 'jsonapi-resources'
 gem 'pry'
 gem 'rubocop', '>= 1.49.0', require: false
 gem 'rubocop-rails', require: false
