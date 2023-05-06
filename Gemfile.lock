@@ -146,6 +146,10 @@ GEM
       sexp_processor (~> 4.8)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    graphiql-rails (1.9.0)
+      railties
+      sprockets-rails
+    graphql (2.0.21)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
@@ -343,6 +347,8 @@ DEPENDENCIES
   capybara
   debug
   error_highlight (>= 0.4.0)
+  graphiql-rails
+  graphql
   importmap-rails
   jbuilder
   jsonapi-resources

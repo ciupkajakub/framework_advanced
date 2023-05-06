@@ -28,6 +28,7 @@ gem 'stimulus-rails'
 gem 'jbuilder'
 
 gem 'brakeman'
+gem 'graphql'
 gem 'jsonapi-resources'
 gem 'pry'
 gem 'rubocop', '>= 1.49.0', require: false
@@ -61,6 +62,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'graphiql-rails'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
