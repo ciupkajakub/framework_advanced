@@ -52,6 +52,7 @@ Metrics/BlockLength:
   Exclude:
     - 'config/routes.rb'
     - 'config/environments/development.rb'
+    - 'spec/**/*.rb'
 
 # https://www.rubydoc.info/github/bbatsov/RuboCop/RuboCop/Cop/Metrics/MethodLength
 # 12 does not seem too restrictive
