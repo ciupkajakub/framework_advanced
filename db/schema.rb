@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_05_15_145921) do
+ActiveRecord::Schema[7.1].define(version: 2023_05_15_153302) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,9 +58,39 @@ ActiveRecord::Schema[7.1].define(version: 2023_05_15_145921) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "post"
+    t.string "title"
+    t.string "body"
+    t.string "postable_type", null: false
+    t.bigint "postable_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["postable_type", "postable_id"], name: "index_posts_on_postable"
+  end
+
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "faculty"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string "employee_card_number"
+    t.string "integer"
+    t.string "first_name"
+    t.string "string"
+    t.string "last_name"
+    t.integer "years_of_experience"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
