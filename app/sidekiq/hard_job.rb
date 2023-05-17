@@ -1,7 +1,9 @@
 class HardJob
   include Sidekiq::Job
 
-  def perform(*args)
-    # Do something
+  def perform(*_args)
+    job = Job.new(job_name: self.class.to_s)
+
+    job.save
   end
 end
