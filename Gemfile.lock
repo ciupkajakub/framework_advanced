@@ -223,6 +223,8 @@ GEM
       loofah (~> 2.19, >= 2.19.1)
     rainbow (3.1.1)
     rake (13.0.6)
+    redis-client (0.14.1)
+      connection_pool
     reek (6.1.4)
       kwalify (~> 0.7.0)
       parser (~> 3.2.0)
@@ -289,6 +291,11 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     sexp_processor (4.16.1)
+    sidekiq (7.1.0)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.14.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -362,6 +369,7 @@ DEPENDENCIES
   rubocop-rspec
   rubycritic
   selenium-webdriver
+  sidekiq
   sprockets-rails
   stimulus-rails
   turbo-rails
