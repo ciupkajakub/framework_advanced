@@ -1,0 +1,6 @@
+<%= turbo_stream.prepend 'books' do %>
+  <%= render 'book', book: @book %>
+<% end %>
+<%= turbo_stream.replace "#{dom_id(Book.new)}_form" do %>
+  <%= render 'form', book: Book.new %>
+<% end %>

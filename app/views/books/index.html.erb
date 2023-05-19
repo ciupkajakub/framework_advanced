@@ -1,14 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<div class="mx-auto max-w-3xl mt-24">
+  <div class="mb-6">
+    <h1 class="font-bold text-4xl">Turbo Books</h1>
+  </div>
 
-<h1>Books</h1>
+  <%= render "form", book: Book.new %>
 
-<div id="books">
-  <% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
-  <% end %>
+  <div id="books" class="divide-y list-none">
+    <%= render @books %>
+  </div>
 </div>
-
-<%= link_to "New book", new_book_path %>
