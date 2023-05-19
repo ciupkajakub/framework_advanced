@@ -1,15 +1,9 @@
-<li id="<%= dom_id book %>" class="py-3">
-  <strong>Title:</strong>
-  <%= book.title %>
-  </p>
+<li id="<%= "#{dom_id(book)}_item" %>" class="py-3">
+  <%= turbo_frame_tag dom_id(book) do %>
+    <div class="flex items-center justify-between">
+      <%= link_to book.title, edit_book_path(book) %>
 
-  <p>
-    <strong>Author:</strong>
-    <%= book.author %>
-  </p>
-
-  <p>
-    <strong>Publication year:</strong>
-    <%= book.publication_year %>
-  </p>
+      <%= button_to "Delete", book_path(book), method: :delete%>
+    </div>
+  <% end %>
 </li>

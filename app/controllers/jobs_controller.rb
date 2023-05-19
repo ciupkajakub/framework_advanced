@@ -1,6 +1,5 @@
 class JobsController < ApplicationController
-  def home
-  end
+  def home; end
 
   def do_job
     HardJob.perform_async
