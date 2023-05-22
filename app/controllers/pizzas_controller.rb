@@ -1,4 +1,5 @@
 class PizzasController < ApplicationController
+  caches_page :show, :index
   before_action :set_pizza, only: %i[ show edit update destroy ]
 
   # GET /pizzas or /pizzas.json
