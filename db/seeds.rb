@@ -41,3 +41,28 @@ Item.create!(
     }
   ]
 )
+
+Pizza.create!(
+  [
+    {
+      name: 'Meat Pizza',
+      vegan: false
+    },
+    {
+      name: 'Pepperoni Pizza',
+      vegan: false
+    },
+    {
+      name: 'Cheese Pizza',
+      vegan: false
+    },
+    {
+      name: 'Vegan Pizza',
+      vegan: true
+    },
+    {
+      name: 'Salad Pizza',
+      vegan: true
+    }
+  ]
+)
