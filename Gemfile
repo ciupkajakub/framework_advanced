@@ -38,6 +38,7 @@ gem 'rubycritic', require: false
 
 gem 'redis'
 gem 'sidekiq'
+gem "actionpack-page_caching"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
