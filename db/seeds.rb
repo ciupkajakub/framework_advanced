@@ -42,27 +42,14 @@ Item.create!(
   ]
 )
 
-Pizza.create!(
-  [
-    {
-      name: 'Meat Pizza',
-      vegan: false
-    },
-    {
-      name: 'Pepperoni Pizza',
-      vegan: false
-    },
-    {
-      name: 'Cheese Pizza',
-      vegan: false
-    },
-    {
-      name: 'Vegan Pizza',
-      vegan: true
-    },
-    {
-      name: 'Salad Pizza',
-      vegan: true
-    }
-  ]
-)
+pizza_1 = Pizza.create!(name: 'Meat Pizza', vegan: false)
+pizza_2 = Pizza.create!(name: 'Pepperoni Pizza', vegan: false)
+pizza_3 = Pizza.create!(name: 'Cheese Pizza', vegan: false)
+pizza_4 = Pizza.create!(name: 'Vegan Pizza', vegan: true)
+pizza_5 = Pizza.create!(name: 'Salad Pizza', vegan: true)
+
+pizza_1.ingredients.create!(name: 'ingredient_1')
+pizza_2.ingredients.create!(name: 'ingredient_2')
+pizza_3.ingredients.create!(name: 'ingredient_3')
+pizza_4.ingredients.create!(name: 'ingredient_4')
+pizza_5.ingredients.create!(name: 'ingredient_5')
