@@ -11,9 +11,9 @@
 
   <ul>
     <% pizza.ingredients.each do |ingredient| %>
-      <% cache(ingredient) do %>
-        <%= render ingredient %>
-      <% end %>
+      <%# cache(ingredient) do %>
+      <%= render ingredient %>
+      <%# end %>
     <% end %>
   </ul>
 </div>
