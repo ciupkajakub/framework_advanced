@@ -4,10 +4,12 @@
 
 <div id="pizzas">
   <% @pizzas.each do |pizza| %>
-    <%= render pizza %>
-    <p>
-      <%= link_to "Show this pizza", pizza %>
-    </p>
+    <% cache pizza do %>
+      <%= render pizza %>
+      <p>
+        <%= link_to "Show this pizza", pizza %>
+      </p>
+    <% end %>
   <% end %>
 </div>
 
