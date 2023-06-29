@@ -97,6 +97,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    actionpack-page_caching (1.2.4)
+      actionpack (>= 4.0.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
@@ -351,6 +353,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  actionpack-page_caching
   bootsnap
   brakeman
   capybara
